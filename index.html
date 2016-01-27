@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Loki Angular</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-	<h1>Hello world</h1>
+<body ng-controller="AppController">
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
+	<div ui-view></div>
+	
+	<!-- <a ui-sref="state1">Appli</a> -->
+    <!-- <a ui-sref="login">Login</a> -->
+
+	<!-- <div class="container">
+		<div class="row">
+			<h1>Formulaire commande</h1> <hr>
+			<form name="commandeForm" role="form" ng-submit="register()" novalidate>
+				<div class="form-group">
+					<label for="" class="control-label">Client</label>
+					<input type="text" class="form-control" ng-model="formData.client" required>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Libelle</label>
+					<input type="text" class="form-control" ng-model="formData.libelle" required>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Montant</label>
+					<input type="text" class="form-control" ng-model="formData.montant" required>
+				</div>
+				<button type="submit" class="btn btn-primary" ng-disabled="commandeForm.$invalid">Submit</button>
+			</form>
+		</div>
+	</div> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/lokijs/src/loki-angular.js"></script>
+	<script src="bower_components/lokijs/src/lokijs.js"></script>
+	<script src="app.js"></script>
+	<script src="lokidb.js"></script>
 </body>
 </html>
